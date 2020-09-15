@@ -45,6 +45,9 @@ class BipmCommentPeriod {
 }
 
 enum BipmCommittee <<enumeration>>{
+  cgpm
+  cipm
+  bipm
   ccauv
   ccem
   ccl
@@ -132,7 +135,7 @@ note bottom of BipmDocumentType: * brochure (SI Brochure)\n* Mise en pratique\n*
 
 note bottom of BipmDocumentStatusType: * Proposed Phase Draft\n* Development Phase Draft\n* In-force\n* Retired
 
-note bottom of BipmCommittee: * CCAUV: Consultative Committee for Acoustics, Ultrasound and Vibration\n* CCEM: Consultative Committee for Electricity and Magnetism\n* CCL: Consultative Committee for Length\n* CCM: Consultative Committee for Mass and Related Quantities\n* CCPR: Consultative Committee for Photometry and Radiometry\n* CCQM: Consultative Committee for Amount of Substance: Metrology in Chemistry and Biology\n* CCRI: Consultative Committee for Ionizing Radiation\n* CCT: Consultative Committee for Thermometry\n* CCTF: Consultative Committee for Time and Frequency\n* CCU: Consultative Committee for Units\n* CCL-CCTF: Frequency Standards Working Group\n* JCGM: Joint Committee for Guides in Metrology\n* JCRB: Joint Committee of the Regional Metrology Organizations and the BIPM\n* JCTLM: Joint Committee for Traceability in Laboratory Medicine\n* INetQI: International Network on Quality Infrastructure
+note bottom of BipmCommittee: * CGPM: General Conference on Weights and Measures\n* CIPM: International Committee for Weights and Measures\n* BIPM: International Bureau of Weights and Measures\n* CCAUV: Consultative Committee for Acoustics, Ultrasound and Vibration\n* CCEM: Consultative Committee for Electricity and Magnetism\n* CCL: Consultative Committee for Length\n* CCM: Consultative Committee for Mass and Related Quantities\n* CCPR: Consultative Committee for Photometry and Radiometry\n* CCQM: Consultative Committee for Amount of Substance: Metrology in Chemistry and Biology\n* CCRI: Consultative Committee for Ionizing Radiation\n* CCT: Consultative Committee for Thermometry\n* CCTF: Consultative Committee for Time and Frequency\n* CCU: Consultative Committee for Units\n* CCL-CCTF: Frequency Standards Working Group\n* JCGM: Joint Committee for Guides in Metrology\n* JCRB: Joint Committee of the Regional Metrology Organizations and the BIPM\n* JCTLM: Joint Committee for Traceability in Laboratory Medicine\n* INetQI: International Network on Quality Infrastructure
 
 note bottom of BipmDocumentRelation: Also indicates current document's relationship\nwith parent documents (e.g. this document is\n annex B of section 3\n of an appendix A)
 
