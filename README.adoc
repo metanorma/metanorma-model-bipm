@@ -1,0 +1,16 @@
+= Metanorma BIPM Models
+
+This is where we keep the Metanorma BIPM model definitions.
+
+The BIPM Standard Document format is an instance of the
+https://github.com/metanorma/metanorma-model-standoc[Metanorma StandardDocument model].
+Details of the general model can be found on its page.
+
+== BIPM Standard Document Model
+
+image::images/BipmStandardDocument.png[]
+
+== BIPM Bibliographic Item Model
+
+image::images/BipmBibliographicItem.png[]
+

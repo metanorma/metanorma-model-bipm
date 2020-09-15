@@ -1,0 +1,52 @@
+@startuml BipmStandardDocument
+
+'******* CONFIGURATION ************************************************
+!include style.uml.inc
+
+
+'******* CLASS DEFINITION *********************************************
+class StandardDocument <<StandardDocument>> {
+
+}
+
+class BipmStandardDocument {
+    +bibdata: BipmBibliographicItem
+    +foreword: HierarchicalSection[0..1]
+    +introduction: HierarchicalSection[0..1]
+    +sections: ClauseSection[1..*]
+    +annex: AnnexSection[0..*]
+    +appendix: AnnexSection[0..*]
+}
+
+
+class TextElement <<BasicDoc>>{
+
+}
+
+class IdElement <<BasicDoc>>{
+
+}
+
+class Figure{
+    +source: String[0..1]
+    +name: LocalizedString[0..1]
+    +note: ParagraphWithFootnote[0..*]
+    +figure: Figure[0..*]
+    +definitions: DefinitionList[0..1]
+    +pre: String[0..1]
+    +content: TextElement[0..*]
+}
+
+'******* NOTES ********************************************************
+
+note bottom of BipmStandardDocument: An Annex is allowed to have clauses and appendices.
+
+
+'******* CLASS RELATIONS **********************************************
+StandardDocument <|-- BipmStandardDocument
+
+TextElement <|-- Keyword
+
+IdElement <|-- Figure
+
+@enduml
