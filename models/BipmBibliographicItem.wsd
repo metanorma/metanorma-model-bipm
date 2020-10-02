@@ -18,6 +18,23 @@ class BipmBibliographicItem {
   +documentStatus: BipmDocumentStatus
   +commentPeriod: BipmCommentPeriod[0..1]
   +structuredIdentifier: BipmStructuredIdentifier
+  +si-aspect: BipmSIAspect[0..1]
+}
+
+enum BipmSIAspect <<enumeration>> {
+A_e_deltanu 
+A_eD (ampere)
+cd_Kcd_h_deltanu
+cd_Kc
+full
+K_k_deltanu 
+K_k
+kg_h_c_deltanu
+kg_h
+m_c_deltanu 
+m_c
+mol_NA
+s_deltanu
 }
 
 class BipmStructuredIdentifier {
@@ -152,6 +169,7 @@ BibliographicItem <|-- BipmBibliographicItem
 BipmBibliographicItem <-- BipmProjectTeam
 BipmBibliographicItem <-- BipmDocumentType
 BipmBibliographicItem <-- BipmDocumentStatus
+BipmBibliographicItem <-- BipmSIAspect
 
 BipmProjectTeam <-- BipmCommittee
 BipmProjectTeam <-- BipmWorkingGroup
