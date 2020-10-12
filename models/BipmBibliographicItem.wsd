@@ -68,7 +68,12 @@ class BipmCommentPeriod {
   +to: Date[0..1]
 }
 
-enum BipmCommittee <<enumeration>>{
+class BipmCommittee {
+  +acronym: BipmCommitteeAcronym
+  +name: string
+}
+
+enum BipmCommitteeAcronym <<enumeration>>{
   cgpm
   cipm
   bipm
@@ -90,6 +95,7 @@ enum BipmCommittee <<enumeration>>{
 }
 
 class BipmWorkingGroup{
+  +acronym: string[0..1]
   +name: FormattedString
 }
 
