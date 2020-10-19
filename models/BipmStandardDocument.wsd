@@ -36,6 +36,13 @@ class Figure{
     +content: TextElement[0..*]
 }
 
+class OrderedList <<StandardDocument>> {
+}
+
+class BipmOrderedList {
+    +start: String[0..1]
+}
+
 '******* NOTES ********************************************************
 
 'note bottom of BipmStandardDocument: An Annex is allowed to have clauses and appendices.
@@ -43,6 +50,7 @@ class Figure{
 
 '******* CLASS RELATIONS **********************************************
 StandardDocument <|-- BipmStandardDocument
+OrderedList <|-- BipmOrderedList
 
 TextElement <|-- Keyword
 
