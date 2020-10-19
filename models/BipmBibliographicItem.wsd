@@ -19,6 +19,7 @@ class BipmBibliographicItem {
   +commentPeriod: BipmCommentPeriod[0..1]
   +structuredIdentifier: BipmStructuredIdentifier
   +si-aspect: BipmSIAspect[0..1]
+  +meeting-note: string[0..1]
 }
 
 enum BipmSIAspect <<enumeration>> {
