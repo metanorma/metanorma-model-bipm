@@ -12,7 +12,7 @@ class BibliographicItem <<biblio>>{
 class BipmBibliographicItem {
   +projectGroup: BipmProjectTeam[1..*]
   +type: BipmDocumentType
-  +title: FormattedString
+  +title: BipmStructuredTitle
   +dates: BipmBibliographicDate[0..*]
   +relation: BipmDocumentRelation[0..*]
   +documentStatus: BipmDocumentStatus
@@ -23,24 +23,31 @@ class BipmBibliographicItem {
 }
 
 enum BipmSIAspect <<enumeration>> {
-A_e_deltanu 
-A_eD (ampere)
-cd_Kcd_h_deltanu
-cd_Kc
-full
-K_k_deltanu 
-K_k
-kg_h_c_deltanu
-kg_h
-m_c_deltanu 
-m_c
-mol_NA
-s_deltanu
+  A_e_deltanu
+  A_eD
+  cd_Kcd_h_deltanu
+  cd_Kc
+  full
+  K_k_deltanu
+  K_k
+  kg_h_c_deltanu
+  kg_h
+  m_c_deltanu
+  m_c
+  mol_NA
+  s_deltanu
+}
+
+class BipmStructuredTitle {
+  +title-main: FormattedString
+  +title-part: FormattedString[0..1]
+  +title-subpart: FormattedString[0..1]
 }
 
 class BipmStructuredIdentifier {
   +docnumber: string
   +part: string[0..1]
+  +subpart: string[0..1]
   +appendix: string[0..1]
 }
 
@@ -177,6 +184,8 @@ BipmBibliographicItem <-- BipmProjectTeam
 BipmBibliographicItem <-- BipmDocumentType
 BipmBibliographicItem <-- BipmDocumentStatus
 BipmBibliographicItem <-- BipmSIAspect
+BipmBibliographicItem <-- BipmStructuredTitle
+BipmBibliographicItem <-- BipmStructuredIdentifier
 
 BipmProjectTeam <-- BipmCommittee
 BipmProjectTeam <-- BipmWorkingGroup
