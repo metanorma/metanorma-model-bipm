@@ -1,0 +1,95 @@
+diagram BipmStandardDocument {
+  
+  
+  
+  class StandardDocument <<StandardDocument>> {
+  
+  }
+  
+  class BipmStandardDocument {
+      +bibdata: BipmBibliographicItem
+      +foreword: HierarchicalSection[0..1]
+      +introduction: HierarchicalSection[0..1]
+      +sections: ClauseSection[1..*]
+      +annex: AnnexSection[0..*]
+  }
+  
+  
+  class TextElement <<BasicDoc>>{
+  
+  }
+  
+  class IdElement <<BasicDoc>>{
+  
+  }
+  
+  class StandocReferenceToIdElement <<StandardDocument>> {
+  }
+  
+  class BipmReferenceToIdElement <<StandardDocument>> {
+      +pagenumber: Boolean[0..1]
+      +nosee: Boolean[0..1]
+  }
+  
+  
+  class Figure{
+      +source: String[0..1]
+      +name: LocalizedString[0..1]
+      +note: ParagraphWithFootnote[0..*]
+      +figure: Figure[0..*]
+      +definitions: DefinitionList[0..1]
+      +pre: String[0..1]
+      +content: TextElement[0..*]
+  }
+  
+  class OrderedList <<StandardDocument>> {
+  }
+  
+  class BipmOrderedList {
+      +start: String[0..1]
+  }
+  
+  
+  'note bottom of BipmStandardDocument: An Annex is allowed to have clauses and appendices.
+  
+  
+  association {
+    owner StandardDocument
+    member BipmStandardDocument
+    owner_type inheritance
+  }
+  association {
+    owner StandardDocument
+    member OrderedList
+    owner_type direct
+  }
+  association {
+    owner StandardDocument
+    member StandocReferenceToIdElement
+    owner_type direct
+  }
+  
+  association {
+    owner OrderedList
+    member BipmOrderedList
+    owner_type inheritance
+  }
+  association {
+    owner StandocReferenceToIdElement
+    member BipmReferenceToIdElement
+    owner_type inheritance
+  }
+  
+  association {
+    owner TextElement
+    member Keyword
+    owner_type inheritance
+  }
+  
+  association {
+    owner IdElement
+    member Figure
+    owner_type inheritance
+  }
+  
+}
