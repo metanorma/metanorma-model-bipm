@@ -57,7 +57,7 @@ diagram BipmBibliographicItem {
   }
   
   class BipmBibliographicDate {
-    +type: BipmBibliographicDateType | text
+    +type: BipmBibliographicDateType 
   }
   
   enum BibliographicDateType <<biblio>> {
@@ -127,30 +127,30 @@ diagram BipmBibliographicItem {
     strategy
     cipm-mra
     resolutions
-    ' mra-policy
-    ' mra-guidance
-    ' mra-others
-    ' mep-note
-    ' mep-guidelines
-    ' mep-recommendation
-    ' technical-annex
+  **  mra-policy
+  **  mra-guidance
+  **  mra-others
+  **  mep-note
+  **  mep-guidelines
+  **  mep-recommendation
+  **  technical-annex
   }
   
-  ' strategy: https://www.bipm.org/utils/en/pdf/CCL-strategy-summary.pdf
-  ' working-party-note: https://www.bipm.org/en/publications/scientific-output/wpn.html
-  ' monographie: https://www.bipm.org/en/publications/scientific-output/monographies-ri.html
-  ' rapport: https://www.bipm.org/en/publications/rapports-bipm/
-  ' rapport: https://www.bipm.org/utils/common/pdf/rapportBIPM/RapportBIPM-2019-05.pdf
-  ' guide: https://www.bipm.org/utils/common/pdf/CC/CCL/CCL-GD-MeP-1.pdf
-  ' guide: https://www.bipm.org/en/committees/cc/cct/guide-its90.html
-  ' guide: https://www.bipm.org/utils/common/pdf/ITS-90/Guide-PLTS-2000.pdf
-  ' guide: https://www.bipm.org/utils/common/pdf/KCDB_2.0/CMC_services/TF_services.pdf
-  ' guide: https://www.bipm.org/utils/common/pdf/CC/CCEM/ccem_guidelines_revisedSI.pdf
-  ' guide (technical annex): https://www.bipm.org/utils/en/pdf/MeP_K_Technical_Annex.pdf
-  ' guide (note): https://www.bipm.org/utils/common/pdf/CC/CCM/CCM_Note-on-dissemination-after-redefinition.pdf
-  ' guide (note): https://www.bipm.org/utils/common/pdf/CC/CCM/BIPM_Note-on-kilogram-redefinition.pdf
-  ' guide (note): https://www.bipm.org/utils/common/pdf/CC/CCM/CCM_Note-on-dissemination-after-redefinition.pdf
-  ' guide (recommendation): https://www.bipm.org/utils/common/pdf/mep/115In+_1267THz_2017.pdf
+  **  strategy: https://www.bipm.org/utils/en/pdf/CCL-strategy-summary.pdf
+  **  working-party-note: https://www.bipm.org/en/publications/scientific-output/wpn.html
+  **  monographie: https://www.bipm.org/en/publications/scientific-output/monographies-ri.html
+  **  rapport: https://www.bipm.org/en/publications/rapports-bipm/
+  **  rapport: https://www.bipm.org/utils/common/pdf/rapportBIPM/RapportBIPM-2019-05.pdf
+  **  guide: https://www.bipm.org/utils/common/pdf/CC/CCL/CCL-GD-MeP-1.pdf
+  **  guide: https://www.bipm.org/en/committees/cc/cct/guide-its90.html
+  **  guide: https://www.bipm.org/utils/common/pdf/ITS-90/Guide-PLTS-2000.pdf
+  **  guide: https://www.bipm.org/utils/common/pdf/KCDB_2.0/CMC_services/TF_services.pdf
+  **  guide: https://www.bipm.org/utils/common/pdf/CC/CCEM/ccem_guidelines_revisedSI.pdf
+  **  guide (technical annex): https://www.bipm.org/utils/en/pdf/MeP_K_Technical_Annex.pdf
+  **  guide (note): https://www.bipm.org/utils/common/pdf/CC/CCM/CCM_Note-on-dissemination-after-redefinition.pdf
+  **  guide (note): https://www.bipm.org/utils/common/pdf/CC/CCM/BIPM_Note-on-kilogram-redefinition.pdf
+  **  guide (note): https://www.bipm.org/utils/common/pdf/CC/CCM/CCM_Note-on-dissemination-after-redefinition.pdf
+  **  guide (recommendation): https://www.bipm.org/utils/common/pdf/mep/115In+_1267THz_2017.pdf
   
   enum BipmDocumentRelationType <<enumeration>> {
     supersedes

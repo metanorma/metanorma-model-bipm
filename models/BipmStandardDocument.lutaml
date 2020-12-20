@@ -50,7 +50,7 @@ diagram BipmStandardDocument {
   }
   
   
-  'note bottom of BipmStandardDocument: An Annex is allowed to have clauses and appendices.
+  ** note bottom of BipmStandardDocument: An Annex is allowed to have clauses and appendices.
   
   
   association {
