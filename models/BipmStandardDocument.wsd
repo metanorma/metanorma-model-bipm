@@ -26,6 +26,15 @@ class IdElement <<BasicDoc>>{
 
 }
 
+class StandocReferenceToIdElement <<StandardDocument>> {
+}
+
+class BipmReferenceToIdElement <<StandardDocument>> {
+    +pagenumber: Boolean[0..1]
+    +nosee: Boolean[0..1]
+}
+
+
 class Figure{
     +source: String[0..1]
     +name: LocalizedString[0..1]
@@ -50,7 +59,11 @@ class BipmOrderedList {
 
 '******* CLASS RELATIONS **********************************************
 StandardDocument <|-- BipmStandardDocument
+StandardDocument <-- OrderedList
+StandardDocument <-- StandocReferenceToIdElement
+
 OrderedList <|-- BipmOrderedList
+StandocReferenceToIdElement <|-- BipmReferenceToIdElement
 
 TextElement <|-- Keyword
 
