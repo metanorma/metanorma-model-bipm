@@ -1,5 +1,7 @@
 = Metanorma BIPM Models
 
+image:https://github.com/metanorma/metanorma-model-bipm/workflows/make/badge.svg["Build Status", link="https://github.com/metanorma/metanorma-model-bipm/actions/workflows/make.yml"]
+
 This is where we keep the Metanorma BIPM model definitions.
 
 The BIPM Standard Document format is an instance of the
